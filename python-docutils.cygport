@@ -1,7 +1,7 @@
-inherit python-distutils
+inherit python2-distutils
 
 NAME="python-docutils"
-VERSION=0.12
+VERSION=0.13.1
 RELEASE=1
 CATEGORY="Python"
 SUMMARY="Python reStructuredText processing module"
@@ -10,6 +10,9 @@ processing plaintext documentation into useful formats, such as HTML or
 LaTeX. It includes reStructuredText, the easy to read, easy to use,
 what-you-see-is-what-you-get plaintext markup language."
 HOMEPAGE="http://docutils.sourceforge.net/"
-SRC_URI="mirror://sourceforge/docutils/${P#python-}.tar.gz"
+
+PKG_NAMES="python2-docutils"
+python2_docutils_OBSOLETES=${NAME}
+python2_docutils_CONTENTS="usr/bin/ ${PYTHON2_SITELIB#/} usr/share/doc/"
 
 ARCH=noarch
