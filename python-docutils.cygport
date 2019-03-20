@@ -1,8 +1,8 @@
 inherit python-wheel
 
 NAME="python-docutils"
-VERSION=0.13.1
-RELEASE=2
+VERSION=0.14
+RELEASE=1
 CATEGORY="Python"
 SUMMARY="Python reStructuredText processing module"
 DESCRIPTION="Docutils is an open-source text processing system for
@@ -11,6 +11,6 @@ LaTeX. It includes reStructuredText, the easy to read, easy to use,
 what-you-see-is-what-you-get plaintext markup language."
 HOMEPAGE="http://docutils.sourceforge.net/"
 
-python3_docutils_CONTENTS="usr/bin/ ${python3_docutils_CONTENTS}"
-
 ARCH=noarch
+
+python37_docutils_CONTENTS+=" usr/bin/*"
